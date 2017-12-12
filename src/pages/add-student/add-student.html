@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Añadir Estudiante
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="myForm" (ngSubmit)="postStudent()" novalidate>
+    <ion-list> 
+      <ion-item>
+        <ion-label stacked>Nombre:</ion-label>
+        <ion-input formControlName="name" type="text" placeholder="nombre"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="myForm.get('name').errors && myForm.get('name').dirty">
+        <p color="danger" ion-text *ngIf="myForm.get('name').hasError('required')">Campo obligatorio</p>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Apellidos:</ion-label>
+        <ion-input formControlName="surname" type="text" placeholder="apellidos"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="myForm.get('surname').errors && myForm.get('surname').dirty">
+        <p color="danger" ion-text *ngIf="myForm.get('surname').hasError('required')">Campo obligatorio</p>
+      </ion-item>
+    </ion-list>
+    <div padding>
+      <button ion-button block type="submit" [disabled]="myForm.invalid">Guardar</button>
+    </div>
+  </form>
+</ion-content>

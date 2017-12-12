@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Estudiantes</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let student of students">
+      <h2>{{student.nombre}}</h2>
+      <p>{{student.apellidos}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>
