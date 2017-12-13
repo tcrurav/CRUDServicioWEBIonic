@@ -18,6 +18,13 @@ export class UserServiceProvider {
     return this.http.get("http://localhost:8080/Alumnos-1.0-SNAPSHOT/webresources/org.ieselrincon.alumnos.alumno");
   }
 
+  getConvalidaciones(student){
+    return this.http.get(
+      "http://localhost:8080/Alumnos-1.0-SNAPSHOT/webresources/org.ieselrincon.alumnos.convalidacion"
+      + "/student/" + student.pkId
+    );
+  }
+
   postStudent(student){
     return this.http.post("http://localhost:8080/Alumnos-1.0-SNAPSHOT/webresources/org.ieselrincon.alumnos.alumno",
       student,

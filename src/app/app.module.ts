@@ -6,6 +6,7 @@ import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
 import { AddStudentPage } from '../pages/add-student/add-student';
 import { StudentPage } from '../pages/student/student';
+import { ConvalidacionesPage } from '../pages/convalidaciones/convalidaciones';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -19,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     AboutPage,
     AddStudentPage,
     StudentPage,
+    ConvalidacionesPage,
     TabsPage
   ],
   imports: [
@@ -32,6 +34,7 @@ import { HttpClientModule } from '@angular/common/http';
     AboutPage,
     AddStudentPage,
     StudentPage,
+    ConvalidacionesPage,
     TabsPage
   ],
   providers: [

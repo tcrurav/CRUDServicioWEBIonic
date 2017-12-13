@@ -6,9 +6,12 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-item *ngFor="let student of students">
+    <ion-list-header>
+      Student list
+    </ion-list-header>
+    <button ion-item *ngFor="let student of students" (click)="showConvalidaciones(student)">
       <h2>{{student.nombre}}</h2>
       <p>{{student.apellidos}}</p>
-    </ion-item>
+    </button>
   </ion-list>
 </ion-content>
